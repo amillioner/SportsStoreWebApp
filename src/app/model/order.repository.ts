@@ -16,7 +16,7 @@ export class OrderRepository {
         this.loaded = true;
         console.log(this.dataSource.getOrders());
         this.dataSource.getOrders()
-            .subscribe(orders => this.orders = this.orders);
+            .subscribe(orders => this.orders = orders);
     }
 
     getOrders(): Order[] {

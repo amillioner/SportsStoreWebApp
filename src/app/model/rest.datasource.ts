@@ -22,7 +22,7 @@ export class RestDataSource {
         return this.http.get<Product[]>(this.baseUrl + "products");
     }
 
-    saveOrder(order: Order) {
+    saveOrder(order: Order): Observable<Order> {
         return this.http.post<Order>(this.baseUrl + "orders", order);
     }
 
@@ -62,13 +62,13 @@ export class RestDataSource {
 
     updateOrder(order: Order): Observable<Order> {
         return this.http.put<Order>(`${this.baseUrl}orders/${order.id}`,
-            this.getOptions());
+            order, this.getOptions());
     }
 
     private getOptions() {
         return {
             headers: new HttpHeaders({
-                "Authorization": `Bearer<${this.auth_token}`
+                "Authorization": `Bearer<${this.auth_token}>`
             })
         }
     }

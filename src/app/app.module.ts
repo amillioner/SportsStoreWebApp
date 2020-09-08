@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from './store/store.module';
-import { StoreComponent } from './store/store.components';
+import { StoreComponent } from './store/store.component';
 import { CartDetailComponent } from './store/cartDetail.component';
 import { CheckoutComponent } from './store/checkout.component';
 import { StoreFirstGuard } from './storeFirst.guard';

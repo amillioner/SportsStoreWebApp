@@ -53,6 +53,6 @@ export class CartLine {
     }
 
     get lineTotal() {
-        return this.quantity + this.product.price;
+        return this.quantity * this.product.price;
     }
 }

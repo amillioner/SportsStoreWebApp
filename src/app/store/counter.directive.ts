@@ -1,4 +1,4 @@
-import { ViewContainerRef, TemplateRef, Input, SimpleChange, Directive } from '@angular/core';
+import { ViewContainerRef, TemplateRef, Input, SimpleChanges, Directive } from '@angular/core';
 
 @Directive({
     selector: "[counterOf]"
@@ -13,7 +13,7 @@ export class CounterDirective {
     @Input("counterOf")
     counter: number;
 
-    ngOnChanges(changes: SimpleChange) {
+    ngOnChanges(changes: SimpleChanges) {
         this.container.clear();
         for (let i = 0; i < this.counter; i++) {
             this.container.createEmbeddedView(this.template, new CounterDirectiveContext(i + 1));

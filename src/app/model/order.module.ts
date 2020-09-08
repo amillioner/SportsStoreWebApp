@@ -11,8 +11,8 @@ export class Order {
     public country: string;
     public state: string;
     public shipped: boolean = false;
-    constructor(public cart: Cart) {
 
+    constructor(public cart: Cart) {
     }
 
     clear() {

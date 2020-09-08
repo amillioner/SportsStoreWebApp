@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 export class CheckoutComponent {
     submitted: boolean = false;
     orderSent: boolean = false;
+    
     constructor(public repository: OrderRepository,
         public order: Order) {
 
